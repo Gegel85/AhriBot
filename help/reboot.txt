@@ -1,0 +1,3 @@
+Usage: ..reboot
+
+Just says you can't use this.

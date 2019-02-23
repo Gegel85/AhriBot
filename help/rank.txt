@@ -1,0 +1,4 @@
+Usage: ..xp/..rank/..exp <user>
+
+This displays your current level on this server.
+You can gain between 15-25 xp every one minute when you send messages on this server

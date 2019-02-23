@@ -1,0 +1,38 @@
+Usage:	..custom_role settings [details]
+	..custom_role settings <field1> <value1> [<field2> <value2> ...]
+	..custom_role create <name> <color>
+	..custom_role edit <name>/<id> <new_name> <color>
+
+If 'create' is passed as first parameter, creates a role with the name and the given color.
+Note that if the name needs to contain spaces, it needs to be between quotes.
+The color field is the hex code of the color without the '#' before
+If 'settings' is passed as first argument and no other arguments are following, displays the current settings for the server.
+If 'details' is passed as second paramter after 'settings', displays the raw values stored in the settings file.
+To change the settings, you need to set the values for each of the fields in settings.
+Fields:
+        place:          <role>
+                        Where all the custom roles will be placed
+
+        requirement:    role/money/"role money"
+                        What is needed to create a role
+                        Either having a role, paying, or both
+
+        content:        <role>/<essences>
+                        The field here depends on the requirement field.
+                        The is the value of the requirement
+
+        content2:       <essences>
+                        Only needed if the requirement is "role money"
+
+        limit:          <number>
+                        The max number of roles that can be created by the same account
+                        (0 for infinite)
+
+        isActive:       true/false
+                        If the custom roles are enabled on this server (default: false)
+
+        putInShop:      true/false
+                        Whether the roles are put in the shop or not
+
+        defaultPrice:   <essences>
+                        The default price of the created roles in the shop

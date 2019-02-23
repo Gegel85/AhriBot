@@ -1,0 +1,6 @@
+Usage: ..coinflip/..cf h/t/heads/tails <Amount>
+
+You bet money on heads or tails. You make double what you pay when you
+win. But if you lose, you lose the money you bet.
+
+If you're a gambler you will rage :smirk:

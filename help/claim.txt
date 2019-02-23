@@ -1,0 +1,3 @@
+Usage: ..claim
+
+Claims the money for the current event if one is running and you didn't already claim it.

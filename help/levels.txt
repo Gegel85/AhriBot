@@ -1,0 +1,5 @@
+Usage: ..levels
+
+This opens up the xp leaderboard for the server.
+Here you can check with other member's of the server's xp.
+If you get to rank 1 you will be awarded the rank 1 role.

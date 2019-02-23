@@ -1,0 +1,3 @@
+Usage: ..daily
+
+This puts 250 essence into your balance. You can claim this every time the dailies reset (00:00 UTC+00).

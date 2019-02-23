@@ -1,0 +1,4 @@
+Usage: ..claimers
+
+Displays whether you have claimed the rewards for the current event.
+If you haven't claimed the rewards for the event the, command will tell you to claim it

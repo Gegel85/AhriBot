@@ -1,0 +1,3 @@
+Usage: ..lsar / ..listselfassignablerole {<add/delete> <Role Name>}
+
+This brings up a list of roles that you can self assign using ..iam <RoleName>

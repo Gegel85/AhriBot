@@ -1,0 +1,4 @@
+Usage: ..hug [<user1> [<user2> <user3> ...]]
+
+Displays a hug gif.
+If no users are passed or none is valid, hugs yourself.

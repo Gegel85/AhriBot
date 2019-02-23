@@ -1,0 +1,4 @@
+Usage: ..change_name <New name>
+
+This changes your name displayed when you use the stats command
+and when you play the roleplay thing (coming soon (I hope))

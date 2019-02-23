@@ -1,0 +1,8 @@
+Usage: ..stats [<user>]
+
+Displays players stats.
+If not user is specified or the user given is invalid, displays the author's stats.
+Else, it displays the given user's ones.
+
+This displays multiple information relating to the roleplay (Coming soon)
+It displays your current balance as well as your current owned roles

@@ -39,3 +39,17 @@ luac.out
 *.x86_64
 *.hex
 
+# Bot token file
+ahri_token.lua
+
+# Config files
+configs
+claimers
+daily
+discordia.log
+event
+xp
+players
+contests
+fails
+gateway.json
