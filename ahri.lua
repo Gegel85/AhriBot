@@ -7308,7 +7308,7 @@ function updateBot(msg)
 	})
 	local file = io.popen("git pull 2>&1")
 	local output = table.concat(arrayFromIt(file:lines()), "\n")
-	local success, _ err_code = file:close()
+	local success, _, err_code = file:close()
 
 	if not success then
 		message:setEmbed({
