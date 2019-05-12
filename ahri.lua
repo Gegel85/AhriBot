@@ -3178,7 +3178,9 @@ end
 function createPlayerXpCard(user, guild, rank, xp, level, xpRemaining, lvlXp, playerColor)
 	os.execute("mkdir xp_cards")
 
-	return nil, "This has been disabled due to a security issue. Sorry for the inconviniance."
+	if true then
+		return nil, "This has been disabled due to a security issue. Sorry for the inconviniance."
+	end
 	local command = ("python3 utils/create_xp.py %i %i %i %i %i 3 5 64 64 65 53 320 20 %x FFFFFF '%s#%s' '%s' ./ressources/xp_bg.png xp_cards/xp_card_%s_%s.png 2>&1"):format(rank, level, xpRemaining, lvlXp, xp, playerColor, user.name:gsub("'", "\\'"), user.discriminator, user.avatarURL, guild.id, user.id)
 	local file = io.popen(command)
 	local lines = arrayFromIt(file:lines())
