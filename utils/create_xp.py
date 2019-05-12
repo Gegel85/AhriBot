@@ -51,3 +51,4 @@ draw.text((barposx + barx / 2 - size2[0] / 2, barposy + bary + 3), "{}/{}".forma
 draw.text((barposx + barx - size[0], barposy + bary + 3), "Total: {}".format(totalXp), textcolor, font=font)
 
 bar.save(result)
+print("Successfully created xp card")

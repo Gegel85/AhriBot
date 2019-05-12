@@ -7293,6 +7293,51 @@ function convertThings(args, message)
 	end
 end
 
+function updateBot(msg)
+	local message = msg:reply({
+		embed = {
+			title = "Updating",
+			description = "Updating bot",
+			timestamp = discord.Date():toISO('T', 'Z'),
+			color = 0xFFFF00,
+			footer = {
+				icon_url = client.user.avatarURL,
+				text = client.user.name
+			}
+		}
+	})
+	local file = io.popen("git pull 2>&1")
+	local output = file:read()
+	local success, _ err_code = file:close()
+	
+	if not success then
+		message:setEmbed({
+			title = "Update failed",
+			description = "Cannot update bot: ```"..output.."```",
+			timestamp = discord.Date():toISO('T', 'Z'),
+			color = 0xFF0000,
+			footer = {
+				icon_url = client.user.avatarURL,
+				text = client.user.name
+			}
+		})
+	else
+		message:setEmbed({
+			title = "Update done",
+			description = "Restarting...",
+			timestamp = discord.Date():toISO('T', 'Z'),
+			color = 0x00FF00,
+			footer = {
+				icon_url = client.user.avatarURL,
+				text = client.user.name
+			}
+		})
+        disconnect = true
+        client:stop()
+	end
+end
+
+
 function commandMgr(message)
 	if not message or message.author == client.user then return end
     local authorized = message.author.id == my_id or isWhitelisted(message.member)
@@ -7414,6 +7459,8 @@ function commandMgr(message)
             whiteListMgr(args, authorized, message)
 		elseif (command == "xpmultiplier") then
 			setXpMultiplier(args, authorized or isAdmin(message.member), message)
+		elseif (command == "update" and authorized) then
+			updateBot(message)
         else
             local suggest = getSuggest(command)
             message:reply({
