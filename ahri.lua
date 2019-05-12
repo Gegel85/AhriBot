@@ -3234,7 +3234,10 @@ function dispXp(message, args)
 		message:reply({
 			embed = {
 				title = "Error",
-				description = "An error occured when trying to create xp card:\n```"..file.."```",
+				description = "An error occured when trying to create xp card:\n```"..file.."```\
+Rank: #"..tostring(rank).."\
+Level: "..tostring(level).."\
+Xp: "..tostring(xpRemaining).."/"..lvlXp.." (Total: "..xp..")",
 				color = 0xFF0000,
 				timestamp = discord.Date():toISO('T', 'Z'),
 				footer = {
