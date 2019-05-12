@@ -7307,13 +7307,13 @@ function updateBot(msg)
 		}
 	})
 	local file = io.popen("git pull 2>&1")
-	local output = file:read()
+	local output = table.concat(arrayFromIt(file:lines()), "\n")
 	local success, _ err_code = file:close()
 
 	if not success then
 		message:setEmbed({
 			title = "Update failed",
-			description = "Cannot update bot: ```"..output.."```",
+			description = "Cannot update bot: \nCommand exit with error code "..tostring(err_code).."\n```"..output.."```",
 			timestamp = discord.Date():toISO('T', 'Z'),
 			color = 0xFF0000,
 			footer = {
