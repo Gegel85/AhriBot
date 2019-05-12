@@ -3182,7 +3182,7 @@ function createPlayerXpCard(user, guild, rank, xp, level, xpRemaining, lvlXp, pl
 	local success, _, status = file:close()
 	
 	if not success then
-		return nil, table.concat(lines, "\n")
+		return nil, "Command exit with error code "..tostring(status)..":\n"..table.concat(lines, "\n")
 	else
 		return true, ("xp_cards/xp_card_%s_%s.png"):format(guild.id, user.id)
 	end
