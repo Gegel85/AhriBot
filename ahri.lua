@@ -1549,6 +1549,19 @@ function giveMoney(args, authorized, message, cheat)
                 }
             }
         })
+	elseif tonumber(args[1]) < 0 then
+        message:reply({
+            embed = {
+                title = "Error",
+                description = "No",
+                color = 0xFF0000,
+                timestamp = discord.Date():toISO('T', 'Z'),
+                footer = {
+                    icon_url = message.author.avatarURL,
+                    text = message.author.name
+                }
+            }
+        })
     elseif (tonumber(args[1]) > getMoney(message.author.id)) then
         message:reply({
             embed = {
