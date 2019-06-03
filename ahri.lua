@@ -1549,7 +1549,7 @@ function giveMoney(args, authorized, message, cheat)
                 }
             }
         })
-	elseif tonumber(args[1]) < 0 then
+	elseif not (tonumber(args[1]) > 0) then
         message:reply({
             embed = {
                 title = "Error",
