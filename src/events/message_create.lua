@@ -32,7 +32,7 @@ return function (message)
 	local obj = commands.commands[cmd]
 
 	if not obj then
-		utils.error(message.channel, 'Unknown command "'..cmd..'"', nil, {
+		utils.error(message.channel, 'Unknown command "'..cmd..'"\nUse ..commands for a list of commands.', nil, {
 			icon_url = message.author.avatarURL,
 			text = message.author.name
 		})
@@ -64,6 +64,8 @@ Please report this error to the bot developper.",
 					text = message.author.name
 				}
 			)
+			
+			print("Fatal error '"..err.."' when running command "..tostring(message.content))
 		end
 	end
 end

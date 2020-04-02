@@ -3,9 +3,7 @@ local enums = require("../enums")
 local utils = require("../utils")
 local commands = require("./init")
 local discord = require("discordia")
-local cmds = {
-	
-}
+local cmds = require("./commands")
 
 for i, k in pairs(cmds) do
 	local callback = k.callback

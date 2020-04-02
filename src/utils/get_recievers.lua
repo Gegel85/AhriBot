@@ -6,7 +6,9 @@ return function (arg, guild)
 
     if (arg == nil) then
         return (nil)
-    elseif (string.sub(arg, 1, 2) == "<@" and string.sub(arg, #arg, #arg) == ">") then
+	elseif tonumber(arg) and client:getUser(arg) then
+		return {arg}
+    elseif string.sub(arg, 1, 2) == "<@" and string.sub(arg, #arg, #arg) == ">" then
         if (string.sub(arg, 3, 3) == "!") then
             buffer = 1
         end

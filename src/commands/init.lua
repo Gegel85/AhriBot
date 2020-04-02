@@ -35,7 +35,7 @@ return {
 		callback = callback or function (self, message, args)
 			error("This command is not yet implemented")
 		end
-		
+
 		for index, value in pairs(baseCommandTable) do
 			cmd[index] = value
 		end
@@ -43,6 +43,20 @@ return {
 		return setmetatable(cmd, {
 			__call = function (self, message, args)
 				message.channel:broadcastTyping()
+				if self.nb_args then
+					local found = false
+					
+					for i, k in pairs(self.nb_args) do
+						found = found or k == #args
+					end
+					if not found then
+						utils.error(message.channel, "Expected "..table.concat(self.nb_args, " or ").." arguments but "..tostring(#args).." were given.\nUse ..help "..self.name.."", "Bad arguments", {
+							icon_url = message.author.avatarURL,
+							text = message.author.name
+						})
+						return
+					end
+				end
 				callback(self, message, args)
 			end
 		})
