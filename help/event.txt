@@ -1,5 +1,0 @@
-Usage: ..event [<duration> <amount> [<title>]]
-
-Creates an event for a given amount of time (as seconds) and a reward.
-The title is optionnal.
-If either the user is not authorized to create events or no arguments are passed, the current running event is displayed (if one is running)

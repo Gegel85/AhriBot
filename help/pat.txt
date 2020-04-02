@@ -1,4 +1,0 @@
-Usage: ..pat [<user1> [<user2> <user3> ...]]
-
-Displays a pat gif.
-If no users are passed or none is valid, displays the raw string given as argument instead of the list of users.

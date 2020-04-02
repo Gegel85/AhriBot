@@ -1,7 +1,0 @@
-Usage: ..help [<command>]
-
-Displays the help you are viewing.
-I know that's useless to explain what this command does but I will do it anyway :).
-If no argument is passed, displays the whole list of the commands you can use.
-If an argument is passed, displays a detailed help page of the command.
-The command field can have or not the standard prefix (..)

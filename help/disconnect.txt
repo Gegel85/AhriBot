@@ -1,3 +1,0 @@
-Usage: ..disconnect
-
-Displays a very neat error message

@@ -1,4 +1,0 @@
-Usage: ..sell <item_name> <amount>
-
-Sells an item from your inventory
-It will sell <amount> number of <item_name>

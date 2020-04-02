@@ -1,9 +1,0 @@
-Usage: ..buy <Category> <Number>
-
-You use this command to buy a role from the ..shop. You are unable
-to purchase a role if you do not have enough essences for it.
-
-NoTe ThAt ThE CaThEgOrIeS ArE KeY SeNsItIvE !!
-
-EXAMPLE:
-..buy Roles 1

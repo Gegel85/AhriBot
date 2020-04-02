@@ -1,4 +1,0 @@
-Usage: ..leaderboard
-
-This displays the leaderboard of who has the most <:essencetheft:414363733960163349>.
-You can compare how much <:essencetheft:414363733960163349> you have with others!

@@ -1,5 +1,0 @@
-Usage: ..give <amount> <user>
-
-You can pay essences to the user that you wish to send to. This
-is limited to your balance. You can't send money over
-your current balance (which makes sense)
