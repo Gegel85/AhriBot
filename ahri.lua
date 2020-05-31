@@ -764,7 +764,7 @@ function createCustomRole(args, message)
                 end
             elseif (settings.requirement ~= "none") then
                 allowed = false
-                desc = desc.."-    The configuration file is corrupted or invalid (Unknown requirement \""..settings.requirement"\")"
+                desc = desc.."-    The configuration file is corrupted or invalid (Unknown requirement \""..settings.requirement.."\")"
             end
             if allowed or isAdmin(message.member) or isWhitelisted(message.member) then
                 local success, err = message.guild:createRole(args[2])
@@ -935,7 +935,7 @@ function dispCustomRolesSettings(message, details)
             elseif (settings.requirement == "role money") then
                 desc = desc.." Have role "..settings.content.." and pay "..settings.content2.." "..emojis.essencesEmoji.."\n"
             else
-                desc = desc.." Error : Corrupted or invalid configuration (Unknown requirement \""..settings.requirement"\")"
+                desc = desc.." Error : Corrupted or invalid configuration (Unknown requirement \""..settings.requirement.."\")"
             end
             desc = desc.."Put in shop : "..tostring(settings.putInShop)
             if (settings.putInShop) then
