@@ -36,16 +36,6 @@ return function (message)
 			icon_url = message.author.avatarURL,
 			text = message.author.name
 		})
-	elseif not message.guild and obj.server_only then
-		utils.error(message.channel, "You need to use this command in a sever", nil, {
-			icon_url = message.author.avatarURL,
-			text = message.author.name
-		})
-	elseif not obj:checkPermissions(message.author) then
-		utils.error(message.channel, "You are not allowed to use this command", nil, {
-			icon_url = message.author.avatarURL,
-			text = message.author.name
-		})
 	else
 		local success, err = pcall(commands.commands[cmd], message, args)
 

@@ -9,10 +9,12 @@ local function listCommands(self, message, args)
 	local prefix = ".."
 	
 	for _, cmd in pairs(commands.commands) do
-		if not categories[cmd.category] then
-			categories[cmd.category] = {}
+		if cmd:checkPermissions(message.member or message.author) then
+			if not categories[cmd.category] then
+				categories[cmd.category] = {}
+			end
+			table.insert(categories[cmd.category], 1, cmd.usage)
 		end
-		table.insert(categories[cmd.category], 1, cmd.usage)
 	end
 	
 	for category, commands in pairs(categories) do
